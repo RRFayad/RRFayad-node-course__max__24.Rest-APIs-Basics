@@ -1,0 +1,117 @@
+359. Module Introduction
+    - Decoupling Frontend and Backend
+
+    - Why use/build REST APIs (instead of rendering front end files)
+
+     -Core Concepts and Principles
+
+360. What are REST APIs and why do we use Them?
+
+    - Not everything Frontend (UI) requires HTML Pages (from the server)
+        - e.g.:
+            mobile apps
+            SPAs
+
+        - When I consume API's from others for the data
+        
+    - REST stands for REpresentational State Transfer
+        - Which means transferring Data instead of User Interfaces
+    
+    - The general server side logic keeps the same, only the response changes
+
+361. Accessing Data with REST APIs (Big Picture)
+
+     - Cliente can be web app, mobile app, or any kind of app the we serve data
+        * Which means we can have an App Backend, or a Service API as a model
+
+    - Data formats:
+        - HTML
+            Data + Structure
+            UI
+            Too much information if we just need the data;
+        - Plain Text
+            Data (No Structure);
+            NO UI
+            Difficult to aprse (as there's no structure)
+        - XML
+            DAta
+            NO UI
+            Easier to read, but relatively verbose
+        - JSON (winner)
+            Data
+            No UI
+            Easiest to Read, and easily conversable to JavaScript
+
+362. Understanding Routing & HTTP Methods
+
+    - API Endpoints
+        The combination between an http method and the respectice path (that we send requests);
+
+    - HTTPS methods:
+        - GET & POST are not the only methods
+            * These are the only ones for browsers  (https forms / links)
+        
+        - GET
+            - Getting a resource from the server
+        
+        - POST
+            - Post a Resource to the Server
+        
+        - PUT
+            - Create or Overwrite an existing resource (POST will never overwrite)
+
+        - PATCH
+            - Update parts of an existing Resource
+
+        - DELETE
+            - Delete a resource
+        
+        - OPTIONS
+            - the browser automatically send ?
+
+        * In theory the methods are just a convention, because a post could run a code that would delete, for example
+
+363. REST APIs - The Core Principles
+
+    - Uniform Interface (Main concept)
+        - Crearly defined API endpoints with clearly defined request + response structure
+
+    - Stateless Interactions (Main concept)
+        -  Server and client don't store any connection history,
+            - Every request is handled separetedly (independent for a session for example)
+    
+    - Other concepts:
+        - Cacheable
+            - Send some response to be cached (valid for a period of time)
+        
+        - CLient - Server separation
+            - Are separated, not concerned with eprsistent data storage
+
+        - Layered System
+            - Server may forward to other APIs
+        
+        - Code on Demand
+            - Executable code may be transferred
+
+364. Creating our REST API Project & Implementing the Route Setup
+
+    Dependencies:
+        - express
+        - nodemon
+        - bodyparser
+
+    - We want to strutucture our project using the MVC (actually MC, as theres no Views anymore)
+        - Create the simplest server;
+        - Create the routes folder and export routes;
+        - Create controllers folder
+
+        * In the enxt lecture we will work in the controller, to return data
+
+
+    
+
+
+
+    
+
+
