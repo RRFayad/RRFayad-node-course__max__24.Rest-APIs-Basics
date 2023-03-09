@@ -143,6 +143,19 @@
             next();      //  Obviously, we are moving to our nextg middleware
         });
 
+368. Wrap Up
+    - Core concepts:
+        - Rest APIs are all about data;
+        - Are normal Node servers, whici expose different endpoits (method + path) to send requests to;
+        - Exchange data usually in JSON format
+        - Are decoupled from the clientes
+    
+    - Req & Res
+        - Attach data in JSON format, and let the other end know it by "Content-Type"
+            * fetch API we have to set it manually
+            * with axios it's automatically for example
+        - CORS errors occurs to protect cross site data exchange
+            * We have to set CORS headers to allow these integrations
 
 
     

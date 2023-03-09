@@ -15,7 +15,7 @@ app.use((req, res, next) => {
     "Access-Control-Allow-Methods",
     "GET, POST, PUT, PATCH, DELETE"
   ); // We are allowing all these methods in the requests
-  res.setHeader("Access-Control-Allow-Header", "Content-Type, Authorization"); // We are allowing theses headers in the requests
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization"); // We are allowing theses headers in the requests
   next(); //  Obviously, we are moving to our nextg middleware
 });
 
