@@ -107,6 +107,29 @@
 
         * In the enxt lecture we will work in the controller, to return data
 
+365. Sending Requests & Responses and Working with Postman
+    
+    - We set our controller's response as the status and a json object:
+        exports.getPosts = (req, res, next) => {
+            res.status(200).json({
+                posts: [{ title: "First Post", content: "This is the first post!" }],
+            });
+        };
+    
+        * We could also see the json object opening the route in the browser (localhost:8080/feed/posts)
+
+    * When creating a new resource, we should use res.status(201)...
+        // 201 means success a resource was created (a bit more specific than just 200)
+
+    - How to get req data:
+        * We are creating the exports.postCreatePost controller;
+        - Up to now, we only used the bodyParser.urlenconded() middleware (which receives the default data from forms (x-www-form-urlencoded) )
+        
+        - So, we use app.use(bodyparser.json()) in the app to parse json data requests
+    
+        - To test our Rest API's requests, we can work with postman
+
+
 
     
 
